@@ -17,6 +17,8 @@ Vue.use(Vuetify, {
     'primary-dark': '#002496',
     'primary-light': '#7077fc',
     secondary: '#4c5667',
+    'secondary-dark': '#292f3a',
+    'secondary-light': '#788295',
     accent: '#be5cd2',
     'accent-dark': '#8b2aa0',
     'accent-light': '#f38dff',

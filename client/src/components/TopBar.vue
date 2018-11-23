@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app dark fixed color="primary-dark">
+  <v-toolbar app dark fixed color="primary-dark" v-if="showToolbar">
 
     <v-toolbar-side-icon></v-toolbar-side-icon>
 
@@ -10,8 +10,11 @@
     <v-spacer></v-spacer>
 
     <v-toolbar-items>
-      <v-btn flat>
-        <v-icon>apps</v-icon>
+      <v-btn
+        router-link
+        to="/authentication/register"
+        flat>
+        <v-icon>weekend</v-icon>
       </v-btn>
     </v-toolbar-items>
 
@@ -20,6 +23,25 @@
 
 <script>
 export default {
+  name: 'TopBar',
+  data () {
+    return {
+      showToolbar: true
+    }
+  },
+  created () {
+    this.$store.watch(
+      (state) => {
+        return this.$store.state.showToolbar
+      },
+      (newVal, oldVal) => {
+        this.showToolbar = newVal
+      },
+      {
+        deep: true
+      }
+    )
+  }
 }
 </script>
 

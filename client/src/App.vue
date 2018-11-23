@@ -1,5 +1,5 @@
 <template>
-  <v-app dark class="blur-admin">
+  <v-app dark v-bind:class="{ 'blur-admin': $store.state.showToolbar }">
     <TopBar />
     <v-content>
       <router-view />
