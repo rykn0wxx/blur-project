@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def show
     render json: {
-      :id => @user.id,
+      :uuid => @user.uuid,
       :username => @user.username,
       :email => @user.email,
       :admin => @user.admin
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   private
     def set_user
-      @user = User.find_by_login(params[:id])
+      @user = User.find_by_login(params[:login])
     end
     
     def user_params

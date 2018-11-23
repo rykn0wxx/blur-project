@@ -31,21 +31,21 @@ export default {
   },
   created () {
     this.$store.watch(
-      (state) => {
-        return this.$store.state.showToolbar
-      },
+      (state) => this.$store.state.showToolbar,
       (newVal, oldVal) => {
         this.showToolbar = newVal
       },
-      {
-        deep: true
-      }
+      { deep: true }
     )
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../sass/variables';
+.v-toolbar {
+  background-color: rgba($primary-dark, 0.8) !important;
+}
 .v-toolbar__title {
   letter-spacing: 1px;
 }

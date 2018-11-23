@@ -2,6 +2,7 @@
 #
 # Table name: users
 #
+#  id              :bigint(8)        not null, primary key
 #  admin           :boolean          default(FALSE)
 #  email           :string(255)      default(""), not null
 #  password_digest :string(255)      default(""), not null
@@ -14,6 +15,7 @@
 #
 #  index_users_on_email     (email) UNIQUE
 #  index_users_on_username  (username) UNIQUE
+#  index_users_on_uuid      (uuid) UNIQUE
 #
 
 class User < ApplicationRecord

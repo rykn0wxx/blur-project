@@ -20,4 +20,8 @@ export default {
 
 <style lang="scss">
 @import 'sass/layout';
+@import 'sass/forms';
+.hide {
+  display: none;
+}
 </style>
