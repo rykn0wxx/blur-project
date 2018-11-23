@@ -25,3 +25,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby, :ruby]
 gem 'jsonapi-resources'
 gem 'knock'
 gem 'uuidtools'
+gem 'mysql-binuuid-rails'
